@@ -1,0 +1,114 @@
+/* Custom CSS for Property Listing Website */
+
+/* Update CSS custom properties to match design brief */
+:root {
+    --background: #ffffff;
+    --foreground: #4b5563;
+    --card: #fffbeb;
+    --card-foreground: #4b5563;
+    --popover: #ffffff;
+    --popover-foreground: #4b5563;
+    --primary: #ea580c;
+    --primary-foreground: #ffffff;
+    --secondary: #f97316;
+    --secondary-foreground: #ffffff;
+    --muted: #fefce8;
+    --muted-foreground: #4b5563;
+    --accent: #f97316;
+    --accent-foreground: #ffffff;
+    --destructive: #dc2626;
+    --destructive-foreground: #ffffff;
+    --border: #e5e7eb;
+    --input: #ffffff;
+    --ring: rgba(234, 88, 12, 0.5);
+    --chart-1: #f97316;
+    --chart-2: #ea580c;
+    --chart-3: #d97706;
+    --chart-4: #dc2626;
+    --chart-5: #4b5563;
+    --radius: 0.5rem;
+    --sidebar: #ffffff;
+    --sidebar-foreground: #4b5563;
+    --sidebar-primary: #fefce8;
+    --sidebar-primary-foreground: #4b5563;
+    --sidebar-accent: #f97316;
+    --sidebar-accent-foreground: #ffffff;
+    --sidebar-border: #e5e7eb;
+    --sidebar-ring: rgba(234, 88, 12, 0.5);
+  }
+  
+  /* Apply semantic design tokens */
+  .bg-background { background-color: var(--background); }
+  .text-foreground { color: var(--foreground); }
+  .bg-card { background-color: var(--card); }
+  .text-card-foreground { color: var(--card-foreground); }
+  .bg-primary { background-color: var(--primary); }
+  .text-primary-foreground { color: var(--primary-foreground); }
+  .bg-secondary { background-color: var(--secondary); }
+  .text-secondary-foreground { color: var(--secondary-foreground); }
+  .text-secondary { color: var(--secondary); }
+  .bg-muted { background-color: var(--muted); }
+  .text-muted-foreground { color: var(--muted-foreground); }
+  .bg-accent { background-color: var(--accent); }
+  .text-accent { color: var(--accent); }
+  .border-border { border-color: var(--border); }
+  .bg-input { background-color: var(--input); }
+  .bg-sidebar { background-color: var(--sidebar); }
+  .text-sidebar-foreground { color: var(--sidebar-foreground); }
+  .border-sidebar-border { border-color: var(--sidebar-border); }
+  
+  /* Focus ring styles */
+  .focus\:ring-ring:focus {
+    box-shadow: 0 0 0 2px var(--ring);
+  }
+  
+  /* Typography */
+  .font-serif {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .font-sans {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
+  
+  /* Property card hover effects */
+  .property-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .property-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Loading animation */
+  .loading {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+  
+  /* Fade in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.5rem;
+    }
+    
+    .property-card {
+      margin-bottom: 1.5rem;
+    }
+  }

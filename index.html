@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LifeStyle Properties - Premium Property Listings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-background text-foreground font-sans">
+    
+    <nav class="bg-sidebar border-b border-sidebar-border sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-sidebar-foreground font-serif">LifeStyle Properties</h1>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-sidebar-foreground hover:text-secondary transition-colors">Home</a>
+                        <a href="#properties" class="nav-link text-sidebar-foreground hover:text-secondary transition-colors">Properties</a>
+                        <a href="#about" class="nav-link text-sidebar-foreground hover:text-secondary transition-colors">About</a>
+                        <a href="#contact" class="nav-link text-sidebar-foreground hover:text-secondary transition-colors">Contact</a>
+                    </div>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-sidebar-foreground">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+     
+        <div id="mobile-menu" class="md:hidden hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-sidebar">
+                <a href="#home" class="block px-3 py-2 text-sidebar-foreground hover:text-secondary">Home</a>
+                <a href="#properties" class="block px-3 py-2 text-sidebar-foreground hover:text-secondary">Properties</a>
+                <a href="#about" class="block px-3 py-2 text-sidebar-foreground hover:text-secondary">About</a>
+                <a href="#contact" class="block px-3 py-2 text-sidebar-foreground hover:text-secondary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section id="home" class="bg-gradient-to-r from-background to-muted py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-foreground mb-6 font-serif">Find Your Dream Home</h1>
+            <p class="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">Discover premium properties in the most desirable locations. Your perfect home awaits.</p>
+            <button class="bg-primary text-primary-foreground px-8 py-3 rounded-lg text-lg font-semibold hover:bg-secondary transition-colors">
+                Explore Properties
+            </button>
+        </div>
+    </section>
+
+     
+    <section class="py-12 bg-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-background rounded-lg shadow-lg p-6">
+                <h2 class="text-2xl font-bold text-foreground mb-6 font-serif">Find Properties</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+                    <div>
+                        <label class="block text-sm font-medium text-foreground mb-2">Location</label>
+                        <input type="text" id="location-filter" placeholder="Enter city or area" class="w-full px-3 py-2 border border-border rounded-md bg-input text-foreground focus:ring-2 focus:ring-ring focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-foreground mb-2">Property Type</label>
+                        <select id="type-filter" class="w-full px-3 py-2 border border-border rounded-md bg-input text-foreground focus:ring-2 focus:ring-ring focus:border-transparent">
+                            <option value="">All Types</option>
+                            <option value="house">House</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="condo">Condo</option>
+                            <option value="villa">Villa</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-foreground mb-2">Price Range</label>
+                        <select id="price-filter" class="w-full px-3 py-2 border border-border rounded-md bg-input text-foreground focus:ring-2 focus:ring-ring focus:border-transparent">
+                            <option value="">Any Price</option>
+                            <option value="0-500000">Under $500K</option>
+                            <option value="500000-1000000">$500K - $1M</option>
+                            <option value="1000000-2000000">$1M - $2M</option>
+                            <option value="2000000+">$2M+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-foreground mb-2">Bedrooms</label>
+                        <select id="bedrooms-filter" class="w-full px-3 py-2 border border-border rounded-md bg-input text-foreground focus:ring-2 focus:ring-ring focus:border-transparent">
+                            <option value="">Any</option>
+                            <option value="1">1+</option>
+                            <option value="2">2+</option>
+                            <option value="3">3+</option>
+                            <option value="4">4+</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="search-btn" class="bg-primary text-primary-foreground px-6 py-2 rounded-md hover:bg-secondary transition-colors">
+                    Search Properties
+                </button>
+            </div>
+        </div>
+    </section>
+
+     
+    <section id="properties" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-foreground mb-12 text-center font-serif">Featured Properties</h2>
+            <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                 Properties will be dynamically loaded here 
+            </div>
+            <div class="text-center mt-12">
+                <button id="load-more" class="bg-secondary text-secondary-foreground px-6 py-3 rounded-md hover:bg-accent transition-colors">
+                    Load More Properties
+                </button>
+            </div>
+        </div>
+    </section>
+
+      
+    <section id="about" class="py-16 bg-muted">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-foreground mb-6 font-serif">Why Choose LifeStyle Properties?</h2>
+                <p class="text-lg text-muted-foreground max-w-3xl mx-auto">We're dedicated to helping you find the perfect property with our extensive listings and expert guidance.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-primary text-primary-foreground w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-foreground mb-2">Premium Listings</h3>
+                    <p class="text-muted-foreground">Curated selection of high-quality properties in prime locations.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary text-primary-foreground w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-foreground mb-2">Expert Guidance</h3>
+                    <p class="text-muted-foreground">Professional real estate agents to guide you through every step.</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary text-primary-foreground w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-foreground mb-2">Trusted Service</h3>
+                    <p class="text-muted-foreground">Years of experience and thousands of satisfied customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      
+    <section id="contact" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-foreground mb-6 font-serif">Get In Touch</h2>
+                <p class="text-lg text-muted-foreground">Ready to find your dream home? Contact us today!</p>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <form id="contact-form" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">First Name</label>
+                            <input type="text" required class="w-full px-3 py-2 border border-border rounded-md bg-input text-foreground focus:ring-2 focus:ring-ring focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-foreground mb-2">Last Name</label>
+                            <input type="text" required class="w-full px-3 py-2 border border-border rounded-md bg-input text-foreground focus:ring-2 focus:ring-ring focus:border-transparent">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-foreground mb-2">Email</label>
+                        <input type="email" required class="w-full px-3 py-2 border border-border rounded-md bg-input text-foreground focus:ring-2 focus:ring-ring focus:border-transparent">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-foreground mb-2">Message</label>
+                        <textarea rows="4" required class="w-full px-3 py-2 border border-border rounded-md bg-input text-foreground focus:ring-2 focus:ring-ring focus:border-transparent"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-primary text-primary-foreground px-8 py-3 rounded-md hover:bg-secondary transition-colors">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+      
+    <footer class="bg-muted py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold text-foreground mb-4 font-serif">LifeStyle Properties</h3>
+                    <p class="text-muted-foreground">Your trusted partner in finding the perfect home.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-foreground mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-muted-foreground hover:text-accent transition-colors">Home</a></li>
+                        <li><a href="#properties" class="text-muted-foreground hover:text-accent transition-colors">Properties</a></li>
+                        <li><a href="#about" class="text-muted-foreground hover:text-accent transition-colors">About</a></li>
+                        <li><a href="#contact" class="text-muted-foreground hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-foreground mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-muted-foreground hover:text-accent transition-colors">Buy Property</a></li>
+                        <li><a href="#" class="text-muted-foreground hover:text-accent transition-colors">Sell Property</a></li>
+                        <li><a href="#" class="text-muted-foreground hover:text-accent transition-colors">Rent Property</a></li>
+                        <li><a href="#" class="text-muted-foreground hover:text-accent transition-colors">Property Management</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold text-foreground mb-4">Contact Info</h4>
+                    <div class="space-y-2 text-muted-foreground">
+                        <p>📧 info@LifeStyleProperties.com</p>
+                        <p>📞 +263780732406
+                        
+                        <p>📍 347 Masotsa Ndlovu, Waterfalls, Harare
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-border mt-8 pt-8 text-center">
+                <p class="text-muted-foreground">&copy; 2025 LifeStyle Properties. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
